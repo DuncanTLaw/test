@@ -1,0 +1,19 @@
+<p>{{ weight }} {{ unit }}</p>
+
+  <mat-button-toggle-group #group="matButtonToggleGroup">
+
+    <mat-button-toggle
+      value="kilos"
+      label="Toggle weight to kilograms">
+      Kilograms
+    </mat-button-toggle>
+
+    <mat-button-toggle
+      value="pounds"
+      label="Toggle weight to pounds">
+      Pounds
+    </mat-button-toggle>
+
+  </mat-button-toggle-group>
+
+  <div>Selected unit: {{group.value}}</div>
