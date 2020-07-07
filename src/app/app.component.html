@@ -27,21 +27,6 @@
 <script>
 let weight = 20;
 let unit = "kg"; // kg by default
-const lbsMultiplier = 2.20462;
-function renderWeight() {
-	document.getElementById("unitButton").innerHTML = unit;
-	if (unit === "kg") {
-		document.getElementById("weightValue").innerHTML = weight;
-	} else {
-		document.getElementById("weightValue").innerHTML = weight * lbsMultiplier;
-	}
-}
-function toggleUnit() {
-	if (unit === "kg")
-		unit = "lbs";
-	else
-		unit = "kg";
-renderWeight();
-}
+
 </script>
 </html>

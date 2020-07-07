@@ -1,9 +1,20 @@
 export class ToggleWeightService{
-  convertToPounds(weight:number){
-    weight = weight*(1/0.4536);
+  unit: string;
+  weight: number;
+
+  toggleUnit() {
+    if (this.unit === "kg")
+      this.unit = "lbs";
+    else
+      this.unit = "kg";
   }
 
-  convertUnit(unit:string){
-    unit = 'lbs';
+  renderWeight() {
+	  document.getElementById("unitButton").innerHTML = this.unit;
+	if (this.unit === "kg") {
+		document.getElementById("weightValue").innerHTML = this.weight;
+	} else {
+		document.getElementById("weightValue").innerHTML = this.weight * (1/0.4536);
   }
+
 }
