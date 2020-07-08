@@ -2,9 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-// import { ToggleWeightService } from './toggle.weight.service';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-
+import { ToggleWeightService } from './toggle.weight.service';
 
 @NgModule({
   declarations: [
@@ -12,8 +10,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    MatButtonToggleModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

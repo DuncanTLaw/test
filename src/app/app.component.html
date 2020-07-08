@@ -1,32 +1,10 @@
-<p>{{ weight }} {{ unit }}</p>
+<p>{{ weight }} {{ unitDefault }}</p>
 
-  <mat-button-toggle-group #group="matButtonToggleGroup">
-
-    <mat-button-toggle
-      value="kilos"
-      label="Toggle weight to kilograms">
-      Kilograms
-    </mat-button-toggle>
-
-    <mat-button-toggle
-      value="pounds"
-      label="Toggle weight to pounds">
-      Pounds
-    </mat-button-toggle>
-
-  </mat-button-toggle-group>
-
-  <div>Selected unit: {{group.value}}</div>
-
-<!-- Suggestions?? -->
-<html>
-<body onload="renderWeight()">
-<p id="weightValue"></p>
-<button id="unitButton" onclick="toggleUnit()"></button>
-</body>
-<script>
-let weight = 20;
-let unit = "kg"; // kg by default
-
-</script>
-</html>
+  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary active">
+        <input type="radio" name="unit" ngModel checked> kg
+    </label>
+    <label class="btn btn-secondary">
+        <input type="radio" name="unit" ngModel> lbs
+    </label>
+  </div>

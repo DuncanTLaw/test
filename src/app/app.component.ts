@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  units = ['kg','lbs'];
 
   title = 'test';
   weight = 20;
-  unit = 'kg';
+  unitDefault = 'kg';
+
   onToggle(){
 
   }
